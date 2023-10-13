@@ -1,10 +1,7 @@
 import {
   Entity,
   Column,
-  PrimaryGeneratedColumn,
   ObjectIdColumn,
-  JoinColumn,
-  JoinTable,
 } from 'typeorm';
 
 @Entity()
@@ -23,6 +20,9 @@ export class User {
 
   @Column({ nullable: false })
   password: string;
+
+  @Column()
+  type: string
 
   @Column({ default: true })
   isActive: boolean;
